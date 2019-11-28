@@ -1,0 +1,466 @@
+
+.container-fluid{
+    background-color: #333333;
+    height: 120px;
+    z-index: 1050;
+  
+}
+
+#bottom{
+    height: 300px;
+}
+#top{
+    position: sticky;
+    top: 0;
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url("tochka2.jpg");
+  
+    /* Full height */
+    height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-2{
+    /* The image used */
+    background-image: url("image_450.jpg");
+  
+    /* Full height */
+    height: 600px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.jumbotron {
+    background: rgba(207, 156, 207, 0.5);
+    height: 100%;
+    
+
+}
+
+h1{
+    font-size:36px;
+    font-weight: 900;
+    z-index: 3;
+    font-family: 'Lobster', cursive;
+
+}
+
+h2, h3, #rodonitovaya, #аqvarel{
+  font-family: 'Lobster', cursive;
+}
+#rodonitovaya{
+    font-weight: 800;
+    font-size:36px;
+    color: rgb(158, 156, 156);
+}
+
+
+
+#aqvarel{
+    font-weight: 800;
+    font-size:36px;
+    
+}
+
+#news{
+    position: relative;
+    margin-top: 10%;
+}
+
+.dropbtn {
+    background-color: #333333;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: 0;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+margin-top: 20px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+/* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* .dropdown-content a:hover {background-color: #ddd;} */
+
+.dropdown:hover .dropdown-content {display: block;}
+
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+.btn-outline-warning{
+    position:absolute;
+    top: 35px;
+    right:10%;
+}
+
+
+
+#aqvarel-image:hover{
+  box-shadow: 0px 0px 10px orange;
+}
+
+#rodo-image:hover{
+  box-shadow: 0px 0px 10px orange;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px 40px;
+    /* border: 1px solid #CCC; */
+    border-radius: 15px;
+    background: #eee, 0.0;
+    scroll-behavior: smooth;
+  }
+  
+  .text1 {
+    /* width: 300px;
+    height: 320px; */
+    /* делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок */
+    display: block;
+    font-size: 18px;
+    
+    
+  }
+  
+  .arrow {
+    position: absolute;
+    top:50%;
+    padding: 0;
+    border-radius: 15px;
+    border: 0px solid gray;
+    font-size: 24px;
+    line-height: 24px;
+    display: block;
+    background-color: white;
+  }
+  
+  .arrow:focus {
+    outline: none;
+  }
+  
+  .arrow:hover {
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 7px;
+  }
+  
+  .next {
+    right: 7px;
+  }
+  
+  .gallery {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .gallery ul {
+    height: 500px;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+    font-size: 11;
+  }
+  
+  .gallery li {
+    position: absolute;
+    top:10px;
+    display: inline-grid;
+    margin-top:auto;
+    width: 300px;
+    height: 400px;
+    margin-left: 15px;
+    margin-right: 4px;
+  }
+
+.add_offer_text{
+    display: inline-block;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    top: 50%;
+    left: 20%;
+    /* margin-right: -30%; */
+    margin: 20px;
+    
+}
+
+.add_offer_text img {
+    max-width: 100%;
+    height: auto;
+    max-height:100%;
+    border:1px solid white;
+}
+
+.add_offer_text {
+    color: white;
+    font-weight: bolder;
+    font-size: 23px;
+    text-align: center;
+}
+
+.container-3{
+    background-color: #f7b640;
+}
+
+input#email_contact{
+    width:  50%;
+    margin-left: 3px;
+}
+
+input#tel_contact{
+  width:  50%;
+}
+
+input.btn.btn-success{
+    width: 30%;
+}
+#myModal > div > div > div.modal-body > form > label:nth-child(5){
+    margin-left: 10%; 
+}
+#myModal > div > div > div.modal-body > form > label:nth-child(2){
+    margin-left: 10%; 
+}
+#myModal > div > div > div.modal-body > form > label:nth-child(8){
+  margin-left: 10%; 
+}
+
+#question{
+  margin-left: 10%; 
+  width: 70%;
+  margin-bottom: 10px;
+}
+
+.modal-content{
+  position: relative;
+  margin-top: 140px;
+}
+
+#class-for-notice{
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.carousel-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 10px 40px;
+    /* border: 1px solid #CCC; */
+    border-radius: 15px;
+    background: #eee, 0.0;
+    scroll-behavior: smooth;
+  }
+
+.flat-block{
+    margin: 10px;
+    color: white;
+    text-align: center;
+}
+
+
+
+.owl-nav{
+    font-size: 72px;
+    color: white;
+    text-align: center;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal-image {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1060; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content-image {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #caption-image {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+  
+  /* Add Animation */
+  .modal-content-image, #caption-image {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close-image {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close-image:hover,
+  .close-image:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+
+#contacts a{
+  color:white;
+  text-decoration: none;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#contacts{
+  margin-top: 3%;
+  color: white;
+  font-size: 28px;
+}
+
+#text-in-new{
+  line-height: 1.2em;
+}
+
+
+
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .btn{
+      padding: 0;
+    }
+
+    .modal-content-image {
+      width: 100%;
+    }
+    .dropbtn{
+      font-size: 16px;
+      padding: 12px;
+      padding-top: 0;
+    }
+
+    #consultation{
+      width:110px;
+      font-size: 14px;
+      position:absolute;
+      right:5%;
+    }
+    .modal-content{
+      width: 350px;
+
+    }
+    .modal-title{
+      font-size: 16px;
+    }
+
+    #cons-accept value{
+      font-size: 14px;
+      
+    }
+    .carousel{
+      padding: 0;
+    }
+    .prev{
+      left: -4px;
+    }
+
+    #flat-carousel{
+      margin-top: 100px;
+      margin-left:13px;
+    }
+    .add_offer_text{
+      left:-5%;
+      height:200px;
+    }
+    #yandex-map{
+      display: none;
+    }
+
+    #rodo-desc{
+      margin-top:50px;
+      width: 250px;
+      flex:10 0 50%;
+      max-width: 80%;
+    }
+
+  }

@@ -1,0 +1,4 @@
+seller/*.sqlite3
+
+seller/seller/settings.py
+seller/seller/apps/landing/mail_sender.py

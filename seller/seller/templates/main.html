@@ -1,0 +1,180 @@
+{%extends 'base.html'%}
+
+{%block header%}
+<div class="row">
+    <div class="col-8">
+        <div class="row">
+            <div class="col-sm">
+            <img src='static/css/cropped-logotype.png' style = "width:100px; height:100px; position: absolute; right: 0; top:10px;"> 
+
+            </div>
+            <div class="col-sm">
+              <div class="d-flex align-items-center">
+                <div class="dropdown">
+                        <button class="dropbtn">Наши объекты</button>
+                        <div class="dropdown-content">
+                            <a href="#rodonitovaya">Родонитовая</a>
+                            <a href="#aqvarel">ЖК Акварель</a>
+                            <!-- <a href="/prices">Цены</a> -->
+                      
+                        </div>
+                        </div>
+            </div>
+
+            </div>
+            <div class="col-sm">
+                <div class="d-flex align-items-center">
+                    <div class="dropdown">
+                            <button class="dropbtn">О нас</button>
+                            <div class="dropdown-content">
+                                <a href="#news-and-disc">Новости и акции</a>
+                                <a href="#bottom">Контакты</a>
+                            </div>
+                            </div>
+                </div>
+              
+            </div>
+            <div class="col-sm"></div>
+            <div class="col-sm"></div>
+            <div class="col-sm"></div>
+          </div>
+            
+    </div>
+        <div class="col-4"><button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#myModal" id='consultation' >Получить консультацию</button></div>
+
+    </div>
+
+{%endblock%}
+
+
+
+{% block content%}
+<div class="parallax">
+    <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                        <div class="col-6">
+                            <h1 style='font-size:{{info_text.0.h1_font_size}}px; color: {{info_text.0.h1_text_color}}; text-align: {{info_text.0.h1_text_align}}'>{{info_text.0.h1_content|safe}}</h1>
+                                
+
+                        </div>
+                        <div class="col-6"></div>
+                        </div>
+                <p class="font-weight-bold" style = 'font-size:{{info_text.0.text_font_size}}px; color: {{info_text.0.text_color}}; text-align: {{info_text.0.text_align}}'>{{info_text.0.text_content|safe}}</p>
+            </div>
+    </div>
+
+</div>
+    <div class="container">
+        
+
+        <div style="height:600px;background-color:white;font-size:36px" >
+                <h2 style = 'text-align: center; margin-top: 20px' id = 'news-and-disc'>НОВОСТИ И АКЦИИ</h2>
+                <div class="container" >
+                    <div id="carousel" class="carousel">
+                        <button class="arrow prev"><i class="fa fa-angle-left" aria-hidden="true"></i></button>
+                        <div class="gallery">
+                          <ul class="images">
+                            {%for new in news%}
+                            <li class = 'text1'>
+                            <img src = '{{new.pic.thumbnail.url}}'>
+                            <p>{{new.date}}</p>
+                            <h3>{{new.title|safe}}</h3>
+                            <p id = 'text-in-new'>{{new.text|safe}}</p><br>
+                            </li>
+                            {%endfor%}
+                            
+                          </ul>
+                        </div>
+                        <button class="arrow next"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                      </div>
+                </div>
+
+        </div>
+        
+        
+    </div>
+
+<div class="container-3">
+    <div class="text-center" id = 'rodonitovaya' style="height: 50px; color:black;">В продаже квартиры на Родонитовой 20А</div>
+
+    <div class="row" style = 'margin-top: 20px; margin-bottom: 20px;'>
+
+        <div class="col">
+            </div>
+            <div class="col-6" id = 'rodo-desc' style = 'font-size:{{info_text.1.text_font_size}}px; color: {{info_text.1.text_color}}; text-align: {{info_text.1.text_align}}'>{{info_text.1.text_content|safe}}
+                    
+            </div>
+            <div class="col">
+            </div>
+            </div>
+
+    <div class = 'container' id = 'flat-carousel'>
+        <div class="owl-one owl-carousel owl-theme">
+            {%for flat in flats_rodo%}
+            <div class  = 'flat-block'>
+                <img class = 'image-for-modal' id="myImg{{ forloop.counter }}" src = '{{flat.pic.url}}' alt="{{flat.flat_name}}" style="width:100%;max-width:300px">
+                <p style='width:100%;max-width:300px'>{{flat.flat_name}}<br>
+                    Цена от {{flat.price}} р.
+                    </p>
+                
+            </div>
+            
+            {%endfor%}
+            
+
+        </div>
+    </div>
+</div>
+
+<div class="parallax-2">
+    <div class="jumbotron">
+            <div class="container">
+                    <p class="text-center" id = 'aqvarel'>Также мы предлагаем квартиры в ЖК Акварель:</p>
+                    <div class="row" style = 'margin-top: 20px; margin-bottom: 20px;'>
+
+                            <div class="col">
+                                </div>
+                                <div class="col-6" style = 'max-width: 80%; flex: 10 0 80%; font-size:{{info_text.2.text_font_size}}px; color: {{info_text.2.text_color}}; text-align: {{info_text.2.text_align}}'>{{info_text.2.text_content|safe}}
+                                        
+                                </div>
+                                <div class="col">
+                                </div>
+                                </div>
+                            <div class="owl-two owl-carousel owl-theme">
+                                {%for flat in flats_aqva%}
+                                <div class  = 'flat-block'>
+                                    <img class = 'image-for-modal' id="myImg{{ forloop.counter }}" src = '{{flat.pic.url}}' alt="{{flat.flat_name}}" style="width:100%;max-width:300px">
+                                    <p style='width:100%;max-width:300px'>{{flat.flat_name}}<br>
+                                        Цена от {{flat.price}} р.
+                                        </p>
+                                    
+                                </div>
+                                
+                                {%endfor%}
+                                
+                    
+                            </div>
+                        
+                    </div>
+                    
+            </div>
+    </div>
+    
+</div>
+
+
+
+{%endblock%}
+
+                  <!-- <div class = 'additional_offer'>
+                        <div class = "add_offer_text">
+                            <a href="#aqvarel" ><img src="static/css/akvarel.jpg" style = 'height: auto;' id = 'aqvarel-image'></a>
+                            <br> 
+                            Жк акварель
+                        </div>
+                        <div class = "add_offer_text">
+                                <img src="static/css/petro.jpg" style = 'height: auto;'>
+                                <br>
+                                Недвижимость в Спб
+                            </div> -->

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="yandex-verification" content="eca7021c959dbb32" />
+    <title>Название сайта</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{%static 'js\owlcarousel\dist\assets\owl.carousel.min.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'css/cropped-logotype.png' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/7db14e7073.js"></script>
+    
+</head>
+<body>
+
+    <div class = 'container'>
+      <!-- modal-for-pictures -->
+        <div id="myModal-image" class="modal-image">
+            <span class="close-image">&times;</span>
+            <img class="modal-content-image" id="img01">
+            <div id="caption-image"></div>
+          </div>
+
+          
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Отправить заявку на консультацию</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                        <form action="/" method="post" id = 'post-form'>
+                            {%csrf_token%}
+                            <label for="email_contact">Ваш e-mail:  </label>
+                            <input id="email_contact" type="text" name="email_contact" value=""><br>
+                            <label for="tel_contact">Ваш номер:</label>
+                            <input id="tel_contact" type="text" name="tel_contact" data-mask="+7 (000) 000 00 00" placeholder="+7 (___) ___ __ __" minlength="18"><br>
+                            <label for="question">Ваш вопрос (макс. 200 символов): </label><br>
+                            <input id="question" type="text" name="question" value="" placeholder="Необязательно" maxlength="200"><br>
+                            <input type="submit" class="btn btn-success" value="Отправить" id = 'cons-accept' style = 'margin-left: 30%;'>
+                        </form>
+                  <div id = 'class-for-notice'></div>
+                     
+                  </div>
+                  
+                  <!-- Modal footer -->
+                  <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                  </div> -->
+                  
+                </div>
+              </div>
+            </div>
+    </div>
+
+    <div class = 'container-fluid' id='top' style = 'position: sticky'>
+    {%block header%}
+    <!-- линки вверху страницы тут -->
+    {%endblock%}
+            
+
+
+
+
+</div>
+        
+</div>
+
+    {%block content%}
+
+
+{%endblock%}
+<div class = 'container-fluid'id='bottom' >
+  <div  class = "container" style='max-width: 1200px;'>
+    <div align = 'center' class="row">
+        <div class="col-sm" id = 'contacts'>
+          <p>Агенство недвижимости "Родонит"</p>
+          <p>Телефон:<a href='tel:+79827085791'>+7(982)708-57-91 </a>
+          </p>
+          <div style = 'display: inline;'>
+              <a href='https://www.instagram.com/rodonitovaya20_ekb/'><img src='static/css/iconmonstr-instagram-11-48.png'></a>
+              <a href='https://api.whatsapp.com/send?phone=79827085791'><img src='static/css/iconmonstr-whatsapp-1-48.png'></a>
+          </div>
+          
+        </div>
+        <div class="col-sm" id='yandex-map'>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Accd92777a370604a738801770fe0acdd155b6364f2b78018e877e0bef9c3ec27&amp;source=constructor" width="500" height="280" frameborder="0" style='margin:10px'></iframe>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+<script src="{% static 'js\owlcarousel\dist\owl.carousel.min.js' %}"></script>
+
+<!-- <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.0/jquery.scrollTo.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="{% static 'js/main.js' %}"></script> 
+
+</body>
+</html>
+
+
