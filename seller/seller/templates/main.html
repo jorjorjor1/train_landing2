@@ -114,7 +114,7 @@
             {%for flat in flats_rodo%}
             <div class  = 'flat-block'>
                 <img class = 'image-for-modal' id="myImg{{ forloop.counter }}" src = '{{flat.pic.url}}' alt="{{flat.flat_name}}" style="width:100%;max-width:300px">
-                <p style='width:100%;max-width:300px'>{{flat.flat_name}}<br>
+                <p style='width:100%;max-width:300px'>{{flat.flat_name|safe}}<br>
                     Цена от {{flat.price}} р.
                     </p>
                 
@@ -145,7 +145,7 @@
                                 {%for flat in flats_aqva%}
                                 <div class  = 'flat-block'>
                                     <img class = 'image-for-modal' id="myImg{{ forloop.counter }}" src = '{{flat.pic.url}}' alt="{{flat.flat_name}}" style="width:100%;max-width:300px">
-                                    <p style='width:100%;max-width:300px'>{{flat.flat_name}}<br>
+                                    <p style='width:100%;max-width:300px'>{{flat.flat_name|safe}}<br>
                                         Цена от {{flat.price}} р.
                                         </p>
                                     
