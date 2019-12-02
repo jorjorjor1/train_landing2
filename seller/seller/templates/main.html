@@ -5,7 +5,7 @@
     <div class="col-8">
         <div class="row">
             <div class="col-sm">
-            <img src='static/css/cropped-logotype.png' style = "width:100px; height:100px; position: absolute; right: 0; top:10px;"> 
+            <img src='static/css/cropped-logotype.png' style = "width:100px; height:100px; position: absolute; right: 0; top:10px;" alt = 'logo'> 
 
             </div>
             <div class="col-sm">
@@ -77,7 +77,7 @@
                           <ul class="images">
                             {%for new in news%}
                             <li class = 'text1'>
-                            <img src = '{{new.pic.thumbnail.url}}'>
+                            <img src = '{{new.pic.thumbnail.url}}' alt = 'Новость'>
                             <p>{{new.date}}</p>
                             <h3>{{new.title|safe}}</h3>
                             <p id = 'text-in-new'>{{new.text|safe}}</p><br>
