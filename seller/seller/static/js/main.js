@@ -63,25 +63,6 @@ $(document).ready(function () {
 });
 
 
-// $('.owl-carousel').owlCarousel({
-//   loop:false,
-//   margin:10,
-//   nav:true,
-//   touchDrag  : false,
-//   mouseDrag  : false,
-//   responsive:{
-//       0:{
-//           items:1
-//       },
-//       600:{
-//           items:2
-//       },
-//       1000:{
-//           items:3
-//       }
-//   }
-// });
-
 $(document).ready(function(){
   $('.owl-one').owlCarousel({
       loop:true,
@@ -151,26 +132,6 @@ var span = document.getElementsByClassName("close-image")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }
-
-// $(function(){
-//   $('#cons-accept').click(function(){
-
-//       $.ajax({
-//           type:"POST",
-//           url:'/search/',
-//           data:{
-              
-//           },
-//           success: searchSuccess,
-//           dataType: 'html'
-//       });
-//   });
-// });
-// // отсылает search_services
-// function searchSuccess (data, textStatus, jqXHR)
-// {
-//   $("#search-results").html(data);
-// }
 
 $(document).on('submit', '#post-form', function(e){
   // e.preventDefault();
