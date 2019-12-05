@@ -127,39 +127,6 @@
     </div>
 </div>
 
-<div class="parallax-2">
-    <div class="jumbotron">
-            <div class="container">
-                    <h1 class="text-center" id = 'aqvarel'>Также мы предлагаем квартиры в ЖК Акварель:</h1>
-                    <div class="row" style = 'margin-top: 20px; margin-bottom: 20px;'>
-
-                            <div class="col">
-                                </div>
-                                <div class="col-6" style = 'max-width: 80%; flex: 10 0 80%; font-size:{{info_text.2.text_font_size}}px; color: {{info_text.2.text_color}}; text-align: {{info_text.2.text_align}}'>{{info_text.2.text_content|safe}}
-                                        
-                                </div>
-                                <div class="col">
-                                </div>
-                                </div>
-                            <div class="owl-two owl-carousel owl-theme">
-                                {%for flat in flats_aqva%}
-                                <div class  = 'flat-block'>
-                                    <img class = 'image-for-modal' id="myImg{{ forloop.counter }}" src = '{{flat.pic.url}}' alt="{{flat.flat_name}}" style="width:100%;max-width:300px">
-                                    <p style='width:100%;max-width:300px'>{{flat.flat_name|safe}}<br>
-                                        Цена от {{flat.price}} р.
-                                        </p>
-                                    
-                                </div>
-                                
-                                {%endfor%}
-                                
-                    
-                            </div>
-                        
-                    </div>
-                    
-            </div>
-    </div>
     
 </div>
 
